@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		736306441C6142E200619ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 736306431C6142E200619ACF /* main.m */; };
 		736306471C6142E200619ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 736306461C6142E200619ACF /* AppDelegate.m */; };
-		7363064A1C6142E200619ACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736306491C6142E200619ACF /* ViewController.m */; };
-		7363064D1C6142E200619ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7363064B1C6142E200619ACF /* Main.storyboard */; };
 		7363064F1C6142E200619ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7363064E1C6142E200619ACF /* Assets.xcassets */; };
 		736306521C6142E200619ACF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736306501C6142E200619ACF /* LaunchScreen.storyboard */; };
-		7363065D1C6142E200619ACF /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363065C1C6142E200619ACF /* WalletTests.m */; };
+		736306691C61431100619ACF /* IDJEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736306681C61431100619ACF /* IDJEuroTests.m */; };
+		736306701C61442C00619ACF /* IDJEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363066F1C61442C00619ACF /* IDJEuro.m */; };
+		736306711C61450200619ACF /* IDJEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363066F1C61442C00619ACF /* IDJEuro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +31,14 @@
 		736306431C6142E200619ACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		736306451C6142E200619ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		736306461C6142E200619ACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		736306481C6142E200619ACF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		736306491C6142E200619ACF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7363064C1C6142E200619ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7363064E1C6142E200619ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736306511C6142E200619ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736306531C6142E200619ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736306581C6142E200619ACF /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7363065C1C6142E200619ACF /* WalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletTests.m; sourceTree = "<group>"; };
 		7363065E1C6142E200619ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736306681C61431100619ACF /* IDJEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJEuroTests.m; sourceTree = "<group>"; };
+		7363066E1C61442C00619ACF /* IDJEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJEuro.h; sourceTree = "<group>"; };
+		7363066F1C61442C00619ACF /* IDJEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJEuro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +80,9 @@
 		736306411C6142E200619ACF /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				7363066A1C6143DC00619ACF /* Model */,
 				736306451C6142E200619ACF /* AppDelegate.h */,
 				736306461C6142E200619ACF /* AppDelegate.m */,
-				736306481C6142E200619ACF /* ViewController.h */,
-				736306491C6142E200619ACF /* ViewController.m */,
-				7363064B1C6142E200619ACF /* Main.storyboard */,
 				7363064E1C6142E200619ACF /* Assets.xcassets */,
 				736306501C6142E200619ACF /* LaunchScreen.storyboard */,
 				736306531C6142E200619ACF /* Info.plist */,
@@ -105,10 +102,27 @@
 		7363065B1C6142E200619ACF /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				7363065C1C6142E200619ACF /* WalletTests.m */,
+				736306671C6142F500619ACF /* Models */,
 				7363065E1C6142E200619ACF /* Info.plist */,
 			);
 			path = WalletTests;
+			sourceTree = "<group>";
+		};
+		736306671C6142F500619ACF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				736306681C61431100619ACF /* IDJEuroTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7363066A1C6143DC00619ACF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7363066E1C61442C00619ACF /* IDJEuro.h */,
+				7363066F1C61442C00619ACF /* IDJEuro.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,6 @@
 			files = (
 				736306521C6142E200619ACF /* LaunchScreen.storyboard in Resources */,
 				7363064F1C6142E200619ACF /* Assets.xcassets in Resources */,
-				7363064D1C6142E200619ACF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7363064A1C6142E200619ACF /* ViewController.m in Sources */,
 				736306471C6142E200619ACF /* AppDelegate.m in Sources */,
+				736306701C61442C00619ACF /* IDJEuro.m in Sources */,
 				736306441C6142E200619ACF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7363065D1C6142E200619ACF /* WalletTests.m in Sources */,
+				736306711C61450200619ACF /* IDJEuro.m in Sources */,
+				736306691C61431100619ACF /* IDJEuroTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +250,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7363064B1C6142E200619ACF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7363064C1C6142E200619ACF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		736306501C6142E200619ACF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
