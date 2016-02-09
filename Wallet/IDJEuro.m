@@ -29,4 +29,9 @@
     return newEuro;
 }
 
+- (BOOL)isEqual:(id)other
+{
+    return [self amount] == [other amount];
+}
+
 @end
