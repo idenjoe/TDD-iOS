@@ -7,6 +7,7 @@
 //
 
 #import "IDJMoney.h"
+#import "NSObject+GNUStepAddons.h"
 
 @interface IDJMoney ()
 
@@ -26,7 +27,7 @@
 
 -(IDJMoney *)times:(NSUInteger)times{
     // It shouldn't be called, but should use the subclass one
-    return self;
+    return [self subclassResponsability:_cmd];
 }
 
 -(BOOL)isEqual:(id)object{

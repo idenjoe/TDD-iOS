@@ -17,6 +17,7 @@
 		737FD2631C6A7BA60042E6F7 /* IDJDollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */; };
 		737FD2661C6A7C020042E6F7 /* IDJDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2651C6A7C020042E6F7 /* IDJDollar.m */; };
 		737FD2691C6A7E310042E6F7 /* IDJMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2681C6A7E310042E6F7 /* IDJMoney.m */; };
+		737FD26D1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		737FD2651C6A7C020042E6F7 /* IDJDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJDollar.m; sourceTree = "<group>"; };
 		737FD2671C6A7E310042E6F7 /* IDJMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJMoney.h; sourceTree = "<group>"; };
 		737FD2681C6A7E310042E6F7 /* IDJMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJMoney.m; sourceTree = "<group>"; };
+		737FD26B1C6A814C0042E6F7 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 		736306411C6142E200619ACF /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				737FD26A1C6A81290042E6F7 /* Categories */,
 				7363066A1C6143DC00619ACF /* Model */,
 				736306451C6142E200619ACF /* AppDelegate.h */,
 				736306461C6142E200619ACF /* AppDelegate.m */,
@@ -136,6 +140,15 @@
 				737FD2681C6A7E310042E6F7 /* IDJMoney.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		737FD26A1C6A81290042E6F7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				737FD26B1C6A814C0042E6F7 /* NSObject+GNUStepAddons.h */,
+				737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 				736306471C6142E200619ACF /* AppDelegate.m in Sources */,
 				736306701C61442C00619ACF /* IDJEuro.m in Sources */,
 				737FD2691C6A7E310042E6F7 /* IDJMoney.m in Sources */,
+				737FD26D1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m in Sources */,
 				736306441C6142E200619ACF /* main.m in Sources */,
 				737FD2661C6A7C020042E6F7 /* IDJDollar.m in Sources */,
 			);
