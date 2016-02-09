@@ -14,6 +14,8 @@
 		736306691C61431100619ACF /* IDJEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736306681C61431100619ACF /* IDJEuroTests.m */; };
 		736306701C61442C00619ACF /* IDJEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363066F1C61442C00619ACF /* IDJEuro.m */; };
 		736306711C61450200619ACF /* IDJEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363066F1C61442C00619ACF /* IDJEuro.m */; };
+		737FD2631C6A7BA60042E6F7 /* IDJDollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */; };
+		737FD2661C6A7C020042E6F7 /* IDJDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2651C6A7C020042E6F7 /* IDJDollar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,9 @@
 		736306681C61431100619ACF /* IDJEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJEuroTests.m; sourceTree = "<group>"; };
 		7363066E1C61442C00619ACF /* IDJEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJEuro.h; sourceTree = "<group>"; };
 		7363066F1C61442C00619ACF /* IDJEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJEuro.m; sourceTree = "<group>"; };
+		737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJDollarTests.m; sourceTree = "<group>"; };
+		737FD2641C6A7C020042E6F7 /* IDJDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJDollar.h; sourceTree = "<group>"; };
+		737FD2651C6A7C020042E6F7 /* IDJDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJDollar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				736306681C61431100619ACF /* IDJEuroTests.m */,
+				737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -121,6 +127,8 @@
 			children = (
 				7363066E1C61442C00619ACF /* IDJEuro.h */,
 				7363066F1C61442C00619ACF /* IDJEuro.m */,
+				737FD2641C6A7C020042E6F7 /* IDJDollar.h */,
+				737FD2651C6A7C020042E6F7 /* IDJDollar.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -227,6 +235,7 @@
 				736306471C6142E200619ACF /* AppDelegate.m in Sources */,
 				736306701C61442C00619ACF /* IDJEuro.m in Sources */,
 				736306441C6142E200619ACF /* main.m in Sources */,
+				737FD2661C6A7C020042E6F7 /* IDJDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737FD2631C6A7BA60042E6F7 /* IDJDollarTests.m in Sources */,
 				736306711C61450200619ACF /* IDJEuro.m in Sources */,
 				736306691C61431100619ACF /* IDJEuroTests.m in Sources */,
 			);
@@ -406,6 +416,7 @@
 				736306631C6142E200619ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		736306641C6142E200619ACF /* Build configuration list for PBXNativeTarget "WalletTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +425,7 @@
 				736306661C6142E200619ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

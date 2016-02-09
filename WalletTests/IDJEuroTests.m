@@ -28,6 +28,7 @@
     IDJEuro *ten = [[IDJEuro alloc] initWithAmount:10];
     IDJEuro *total = [five times:2];
     XCTAssertEqualObjects(ten, total, @"Equivalent objest should be equal!");
+    XCTAssertFalse([total isEqual:five], @"Equivalent objest should be equal!");
 }
 
 @end
