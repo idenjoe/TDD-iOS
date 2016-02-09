@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "IDJMoney.h"
 
-@interface IDJMonetTests : XCTestCase
+@interface IDJMoneyTests : XCTestCase
 
 @end
 
-@implementation IDJMonetTests
+@implementation IDJMoneyTests
 
 -(void)testThatTimesRaisesException{
     IDJMoney *money = [[IDJMoney alloc] initWithAmount:1];

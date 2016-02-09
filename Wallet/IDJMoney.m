@@ -30,8 +30,10 @@
     return [self subclassResponsability:_cmd];
 }
 
--(BOOL)isEqual:(id)object{
-    return [self amount] == [object amount];
+#pragma mark - Overriden
+
+-(NSString *)description{
+    return [NSString stringWithFormat:@"<%@ %ld",[self class],(long)[self amount]];
 }
 
 @end

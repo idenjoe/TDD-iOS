@@ -31,4 +31,11 @@
     XCTAssertFalse([total isEqual:five], @"Equivalent objest should be equal!");
 }
 
+-(void)testHash{
+    IDJDollar *a = [[IDJDollar alloc] initWithAmount:2];
+    IDJDollar *b = [[IDJDollar alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash],@"Equivalent objects should be equal");
+}
+
 @end

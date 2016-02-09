@@ -27,8 +27,15 @@
     IDJEuro *five = [[IDJEuro alloc] initWithAmount:5];
     IDJEuro *ten = [[IDJEuro alloc] initWithAmount:10];
     IDJEuro *total = [five times:2];
-    XCTAssertEqualObjects(ten, total, @"Equivalent objest should be equal!");
-    XCTAssertFalse([total isEqual:five], @"Equivalent objest should be equal!");
+    XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");
+    XCTAssertFalse([total isEqual:five], @"Equivalent objects should be equal!");
+}
+
+-(void)testHash{
+    IDJEuro *a = [[IDJEuro alloc] initWithAmount:2];
+    IDJEuro *b = [[IDJEuro alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash],@"Equivalent objects should be equal");
 }
 
 @end
