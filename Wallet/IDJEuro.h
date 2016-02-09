@@ -10,7 +10,6 @@
 
 @interface IDJEuro : NSObject
 
-@property (nonatomic, readonly) NSInteger amount;
 -(id)initWithAmount:(NSUInteger)amount;
 -(IDJEuro *)times:(NSInteger)times;
 
