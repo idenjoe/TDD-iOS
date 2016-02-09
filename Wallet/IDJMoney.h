@@ -1,5 +1,5 @@
 //
-//  IDJDollar.h
+//  IDJMoney.h
 //  Wallet
 //
 //  Created by José Manuel Rodríguez Moreno on 09/02/16.
@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IDJMoney.h"
 
-@interface IDJDollar : IDJMoney
+@interface IDJMoney : NSObject
 
 -(id)initWithAmount:(NSUInteger)amount;
--(IDJDollar *)times:(NSUInteger)times;
+-(IDJMoney *)times:(NSUInteger)times;
 
 @end

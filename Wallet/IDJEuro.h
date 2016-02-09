@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IDJMoney.h"
 
-@interface IDJEuro : NSObject
+@interface IDJEuro : IDJMoney
 
 -(id)initWithAmount:(NSUInteger)amount;
 -(IDJEuro *)times:(NSInteger)times;
