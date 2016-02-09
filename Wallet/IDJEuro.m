@@ -24,8 +24,9 @@
     return self;
 }
 
--(void)times:(NSInteger)times{
-    self.amount *= times;
+-(IDJEuro *)times:(NSInteger)times{
+    IDJEuro *newEuro = [[IDJEuro alloc] initWithAmount:self.amount * times];
+    return newEuro;
 }
 
 @end

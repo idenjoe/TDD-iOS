@@ -12,6 +12,6 @@
 
 @property (nonatomic, readonly) NSInteger amount;
 -(id)initWithAmount:(NSUInteger)amount;
--(void)times:(NSInteger)times;
+-(IDJEuro *)times:(NSInteger)times;
 
 @end
