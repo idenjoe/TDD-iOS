@@ -12,10 +12,7 @@
 		7363064F1C6142E200619ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7363064E1C6142E200619ACF /* Assets.xcassets */; };
 		736306521C6142E200619ACF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736306501C6142E200619ACF /* LaunchScreen.storyboard */; };
 		736306691C61431100619ACF /* IDJEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736306681C61431100619ACF /* IDJEuroTests.m */; };
-		736306701C61442C00619ACF /* IDJEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363066F1C61442C00619ACF /* IDJEuro.m */; };
-		736306711C61450200619ACF /* IDJEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7363066F1C61442C00619ACF /* IDJEuro.m */; };
 		737FD2631C6A7BA60042E6F7 /* IDJDollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */; };
-		737FD2661C6A7C020042E6F7 /* IDJDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2651C6A7C020042E6F7 /* IDJDollar.m */; };
 		737FD2691C6A7E310042E6F7 /* IDJMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD2681C6A7E310042E6F7 /* IDJMoney.m */; };
 		737FD26D1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */; };
 		737FD26F1C6A83D50042E6F7 /* IDJMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 737FD26E1C6A83D50042E6F7 /* IDJMoneyTests.m */; };
@@ -42,16 +39,13 @@
 		736306581C6142E200619ACF /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363065E1C6142E200619ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736306681C61431100619ACF /* IDJEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJEuroTests.m; sourceTree = "<group>"; };
-		7363066E1C61442C00619ACF /* IDJEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJEuro.h; sourceTree = "<group>"; };
-		7363066F1C61442C00619ACF /* IDJEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJEuro.m; sourceTree = "<group>"; };
 		737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJDollarTests.m; sourceTree = "<group>"; };
-		737FD2641C6A7C020042E6F7 /* IDJDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJDollar.h; sourceTree = "<group>"; };
-		737FD2651C6A7C020042E6F7 /* IDJDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJDollar.m; sourceTree = "<group>"; };
 		737FD2671C6A7E310042E6F7 /* IDJMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJMoney.h; sourceTree = "<group>"; };
 		737FD2681C6A7E310042E6F7 /* IDJMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJMoney.m; sourceTree = "<group>"; };
 		737FD26B1C6A814C0042E6F7 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		737FD26E1C6A83D50042E6F7 /* IDJMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJMoneyTests.m; sourceTree = "<group>"; };
+		737FD2701C6A8D470042E6F7 /* IDJMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IDJMoney-Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,12 +129,9 @@
 		7363066A1C6143DC00619ACF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7363066E1C61442C00619ACF /* IDJEuro.h */,
-				7363066F1C61442C00619ACF /* IDJEuro.m */,
-				737FD2641C6A7C020042E6F7 /* IDJDollar.h */,
-				737FD2651C6A7C020042E6F7 /* IDJDollar.m */,
 				737FD2671C6A7E310042E6F7 /* IDJMoney.h */,
 				737FD2681C6A7E310042E6F7 /* IDJMoney.m */,
+				737FD2701C6A8D470042E6F7 /* IDJMoney-Private.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,11 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				736306471C6142E200619ACF /* AppDelegate.m in Sources */,
-				736306701C61442C00619ACF /* IDJEuro.m in Sources */,
 				737FD2691C6A7E310042E6F7 /* IDJMoney.m in Sources */,
 				737FD26D1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m in Sources */,
 				736306441C6142E200619ACF /* main.m in Sources */,
-				737FD2661C6A7C020042E6F7 /* IDJDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				737FD2631C6A7BA60042E6F7 /* IDJDollarTests.m in Sources */,
-				736306711C61450200619ACF /* IDJEuro.m in Sources */,
 				736306691C61431100619ACF /* IDJEuroTests.m in Sources */,
 				737FD26F1C6A83D50042E6F7 /* IDJMoneyTests.m in Sources */,
 			);

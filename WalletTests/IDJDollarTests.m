@@ -1,5 +1,5 @@
 //
-//  IDJDollarTests.m
+//  IDJMoneyTests.m
 //  Wallet
 //
 //  Created by José Manuel Rodríguez Moreno on 09/02/16.
@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "IDJDollar.h"
+#import "IDJMoney.h"
 
 @interface IDJDollarTests : XCTestCase
 
@@ -16,26 +16,35 @@
 @implementation IDJDollarTests
 
 -(void)testMultiplication{
-    IDJDollar *five = [[IDJDollar alloc] initWithAmount:5];
-    IDJDollar *total = [five times:2];
-    IDJDollar *ten = [[IDJDollar alloc] initWithAmount:10];
+    IDJMoney *five = [IDJMoney dollarWithAmount:5];
+    IDJMoney *total = [five times:2];
+    IDJMoney *ten = [IDJMoney dollarWithAmount:10];
     
     XCTAssertEqualObjects(total, ten, @"$5 * 2 should be $10");
 }
 
 -(void)testEquality{
-    IDJDollar *five = [[IDJDollar alloc] initWithAmount:5];
-    IDJDollar *ten = [[IDJDollar alloc] initWithAmount:10];
-    IDJDollar *total = [five times:2];
+    IDJMoney *five = [IDJMoney dollarWithAmount:5];
+    IDJMoney *ten = [IDJMoney dollarWithAmount:10];
+    IDJMoney *total = [five times:2];
     XCTAssertEqualObjects(ten, total, @"Equivalent objest should be equal!");
-    XCTAssertFalse([total isEqual:five], @"Equivalent objest should be equal!");
+    XCTAssertFalse([total isEqual:five], @"Non Equivalent objest should not be equal!");
 }
 
 -(void)testHash{
-    IDJDollar *a = [[IDJDollar alloc] initWithAmount:2];
-    IDJDollar *b = [[IDJDollar alloc] initWithAmount:2];
+    IDJMoney *a = [IDJMoney dollarWithAmount:2];
+    IDJMoney *b = [IDJMoney dollarWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash],@"Equivalent objects should be equal");
+}
+
+-(void)testAmountStorage{
+    IDJMoney *dollar = [IDJMoney dollarWithAmount:2];
+    
+#pragma clang dianostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    XCTAssertEqual(2,[[dollar performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as the stored");
+#pragma clang diagnostic pop
 }
 
 @end

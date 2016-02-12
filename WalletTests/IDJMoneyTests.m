@@ -15,10 +15,9 @@
 
 @implementation IDJMoneyTests
 
--(void)testThatTimesRaisesException{
-    IDJMoney *money = [[IDJMoney alloc] initWithAmount:1];
-    
-    XCTAssertThrows([money times:2],@"Should raise an exception");
+-(void) testCurrency{
+    XCTAssertEqualObjects(@"EUR", [[IDJMoney euroWithAmount:2] currency],@"The currency of euros should be EUR");
+    XCTAssertEqualObjects(@"USD", [[IDJMoney dollarWithAmount:2] currency],@"The currency of dollars should be USD");
 }
 
 @end

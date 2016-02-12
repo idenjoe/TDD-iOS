@@ -10,7 +10,12 @@
 
 @interface IDJMoney : NSObject
 
--(id)initWithAmount:(NSUInteger)amount;
--(IDJMoney *)times:(NSUInteger)times;
+@property(nonatomic, strong) NSString *currency;
+
++(id)euroWithAmount:(NSInteger)amount;
++(id)dollarWithAmount:(NSInteger)amount;
+-(id)initWithAmount:(NSUInteger)amount
+           currency:(NSString *)currency;
+-(id)times:(NSUInteger)times;
 
 @end
