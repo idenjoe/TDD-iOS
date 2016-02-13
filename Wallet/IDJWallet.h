@@ -10,5 +10,10 @@
 #import "IDJMoney.h"
 
 @interface IDJWallet : NSObject<IDJMoney>
-@property (nonatomic,readonly) NSUInteger count;
+@property (nonatomic, readonly) NSUInteger countCurrencies;
+
+-(void)addMoney:(IDJMoney *)money;
+-(void)takeMoney:(IDJMoney *)money;
+-(NSUInteger)moneyAtIndex:(NSUInteger)index;
+
 @end

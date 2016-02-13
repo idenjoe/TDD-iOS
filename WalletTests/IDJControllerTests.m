@@ -52,13 +52,19 @@
     XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text,@"Text titles should be equal");
 }
 
--(void)testThatTableHasOneSection{
+-(void)testThatTableHasNumberOfSectionsEqualToNumberOfDifferentCurrenciesPlusOne{
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    XCTAssertEqual(sections, 1,@"There can only be one");
+    XCTAssertEqual(sections, self.wallet.countCurrencies+1,@"There can only be one");
 }
 
--(void)testThatNumberOfCellsIsNumberOfMoneysPlusOne{
-    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0],@"Number of cells are the number of moneys plus 1 (the total)");
+-(void)testThatNumberOfCellsForCurrencyIsNumberOfMoneysPlusOne{
+    XCTAssertEqual([self.wallet moneyAtIndex:0] + 1, [self.walletVC tableView:nil numberOfRowsInSection:0],@"Number of cells are the number of moneys plus 1 (the total)");
+}
+
+-(void)testThatTheNumberOfCellForTheLastSectionIsEqualToOne{
+    NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+    NSUInteger rows = [self.walletVC tableView:nil numberOfRowsInSection:sections-1];
+    XCTAssertEqual(rows, 1,@"The last sections should have only one cell");
 }
 
 @end
