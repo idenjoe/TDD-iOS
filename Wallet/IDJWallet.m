@@ -23,6 +23,10 @@
     return self;
 }
 
+-(NSUInteger)count{
+    return self.moneys.count;
+}
+
 -(id<IDJMoney>)plus:(IDJMoney *)other{
     [self.moneys addObject:other];
     return self;
