@@ -28,13 +28,13 @@
 }
 
 // €40 + $20 = $100 2:1
-//-(void)testAdditionWithReduction{
-//    IDJBroker *broker = [IDJBroker new];
-//    [broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
-//    IDJWallet *wallet = [[IDJWallet alloc] initWithAmount:40 currency:@"EUR"];
-//    [wallet plus:[IDJMoney dollarWithAmount:20]];
-//    IDJMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
-//    XCTAssertEqualObjects(reduced, [IDJMoney dollarWithAmount:100],@"€40 + $20 = $100 2:1");
-//}
+-(void)testAdditionWithReduction{
+    IDJBroker *broker = [IDJBroker new];
+    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    IDJWallet *wallet = [[IDJWallet alloc] initWithAmount:40 currency:@"EUR"];
+    [wallet plus:[IDJMoney dollarWithAmount:20]];
+    IDJMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
+    XCTAssertEqualObjects(reduced, [IDJMoney dollarWithAmount:100],@"€40 + $20 = $100 2:1");
+}
 
 @end

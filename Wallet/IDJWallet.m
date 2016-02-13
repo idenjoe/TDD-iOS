@@ -38,4 +38,15 @@
     return self;
 }
 
+-(id<IDJMoney>)reduceToCurrency:(NSString *)currency
+                     withBroker:(IDJBroker *)broker {
+    
+    IDJMoney *result = [[IDJMoney alloc] initWithAmount:0 currency:currency];
+    for (IDJMoney *money in self.moneys) {
+        result = [result plus:[money reduceToCurrency:currency withBroker:broker]];
+    }
+    
+    return result;
+}
+
 @end

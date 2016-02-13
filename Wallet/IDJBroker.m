@@ -23,7 +23,7 @@
     return self;
 }
 
--(IDJMoney *)reduce:(id<IDJMoney>)money toCurrency:(NSString *)currency{
+-(id<IDJMoney>)reduce:(id<IDJMoney>)money toCurrency:(NSString *)currency{
     // double dispatch
     return [money reduceToCurrency:currency withBroker:self];
 }
