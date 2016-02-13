@@ -27,6 +27,8 @@
 		73A533F41C6FCC1F006D39EE /* IDJSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73A533F11C6FCC1F006D39EE /* IDJSimpleViewController.xib */; };
 		73A533F51C6FCC1F006D39EE /* IDJSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73A533F11C6FCC1F006D39EE /* IDJSimpleViewController.xib */; };
 		73A533F81C6FCC51006D39EE /* IDJControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533F71C6FCC51006D39EE /* IDJControllerTests.m */; };
+		73A533FB1C6FD3B5006D39EE /* IDJWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533FA1C6FD3B5006D39EE /* IDJWalletTableViewController.m */; };
+		73A533FC1C6FD3B5006D39EE /* IDJWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533FA1C6FD3B5006D39EE /* IDJWalletTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		73A533F01C6FCC1F006D39EE /* IDJSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJSimpleViewController.m; sourceTree = "<group>"; };
 		73A533F11C6FCC1F006D39EE /* IDJSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDJSimpleViewController.xib; sourceTree = "<group>"; };
 		73A533F71C6FCC51006D39EE /* IDJControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJControllerTests.m; sourceTree = "<group>"; };
+		73A533F91C6FD3B5006D39EE /* IDJWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJWalletTableViewController.h; sourceTree = "<group>"; };
+		73A533FA1C6FD3B5006D39EE /* IDJWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJWalletTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 				73A533EF1C6FCC1F006D39EE /* IDJSimpleViewController.h */,
 				73A533F01C6FCC1F006D39EE /* IDJSimpleViewController.m */,
 				73A533F11C6FCC1F006D39EE /* IDJSimpleViewController.xib */,
+				73A533F91C6FD3B5006D39EE /* IDJWalletTableViewController.h */,
+				73A533FA1C6FD3B5006D39EE /* IDJWalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A533FB1C6FD3B5006D39EE /* IDJWalletTableViewController.m in Sources */,
 				73A533EC1C6FBE66006D39EE /* IDJWallet.m in Sources */,
 				736306471C6142E200619ACF /* AppDelegate.m in Sources */,
 				73A533F21C6FCC1F006D39EE /* IDJSimpleViewController.m in Sources */,
@@ -313,6 +320,7 @@
 				73A533E31C6FA864006D39EE /* IDJBrokerTests.m in Sources */,
 				73A533F81C6FCC51006D39EE /* IDJControllerTests.m in Sources */,
 				73A533E71C6FA8FD006D39EE /* IDJBroker.m in Sources */,
+				73A533FC1C6FD3B5006D39EE /* IDJWalletTableViewController.m in Sources */,
 				737FD26F1C6A83D50042E6F7 /* IDJMoneyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
