@@ -8,6 +8,8 @@
 
 #import "IDJMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "IDJBroker.h"
+
 @interface IDJMoney ()
 @property(nonatomic, strong) NSNumber *amount;
 @end
@@ -32,7 +34,7 @@
     return self;
 }
 
--(id)times:(NSUInteger)times{
+-(id<IDJMoney>)times:(NSUInteger)times{
     IDJMoney *newDollar = [[IDJMoney alloc] initWithAmount:self.amount.integerValue * times currency:self.currency];
     
     return newDollar;
@@ -47,11 +49,31 @@
     }
 }
 
--(IDJMoney *)plus:(IDJMoney *)other{
+-(id<IDJMoney>)plus:(IDJMoney *)other{
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     
     IDJMoney *total = [[IDJMoney alloc] initWithAmount:totalAmount currency:self.currency];
     return total;
+}
+
+-(id<IDJMoney>)reduceToCurrency:(NSString *)currency withBroker:(IDJBroker *)broker{
+    
+    IDJMoney *result;
+    float rate = [[broker.rates
+                   objectForKey:[broker keyFromCurrency:self.currency
+                                           toCurrency:currency]] floatValue];
+    
+    if ([self.currency isEqual:currency]) {
+        result = self;
+    }else if (rate == 0){
+        [NSException raise:@"NoConversionRateException" format:@"Must have a conversion from %@ to %@",self.currency, currency];
+    }else{
+        NSInteger newAmount = self.amount.integerValue * rate;
+        
+        result = [[IDJMoney alloc] initWithAmount:newAmount currency:currency];
+    }
+    
+    return result;
 }
 
 -(NSUInteger)hash{

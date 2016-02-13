@@ -19,6 +19,9 @@
 		73A533E31C6FA864006D39EE /* IDJBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533E21C6FA864006D39EE /* IDJBrokerTests.m */; };
 		73A533E61C6FA8FD006D39EE /* IDJBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533E51C6FA8FD006D39EE /* IDJBroker.m */; };
 		73A533E71C6FA8FD006D39EE /* IDJBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533E51C6FA8FD006D39EE /* IDJBroker.m */; };
+		73A533E91C6FBB90006D39EE /* IDJWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533E81C6FBB90006D39EE /* IDJWalletTests.m */; };
+		73A533EC1C6FBE66006D39EE /* IDJWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533EB1C6FBE66006D39EE /* IDJWallet.m */; };
+		73A533ED1C6FBE66006D39EE /* IDJWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A533EB1C6FBE66006D39EE /* IDJWallet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		73A533E21C6FA864006D39EE /* IDJBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJBrokerTests.m; sourceTree = "<group>"; };
 		73A533E41C6FA8FD006D39EE /* IDJBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJBroker.h; sourceTree = "<group>"; };
 		73A533E51C6FA8FD006D39EE /* IDJBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJBroker.m; sourceTree = "<group>"; };
+		73A533E81C6FBB90006D39EE /* IDJWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJWalletTests.m; sourceTree = "<group>"; };
+		73A533EA1C6FBE66006D39EE /* IDJWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJWallet.h; sourceTree = "<group>"; };
+		73A533EB1C6FBE66006D39EE /* IDJWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJWallet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 				737FD2621C6A7BA60042E6F7 /* IDJDollarTests.m */,
 				737FD26E1C6A83D50042E6F7 /* IDJMoneyTests.m */,
 				73A533E21C6FA864006D39EE /* IDJBrokerTests.m */,
+				73A533E81C6FBB90006D39EE /* IDJWalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -139,6 +146,8 @@
 				737FD2681C6A7E310042E6F7 /* IDJMoney.m */,
 				73A533E41C6FA8FD006D39EE /* IDJBroker.h */,
 				73A533E51C6FA8FD006D39EE /* IDJBroker.m */,
+				73A533EA1C6FBE66006D39EE /* IDJWallet.h */,
+				73A533EB1C6FBE66006D39EE /* IDJWallet.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A533EC1C6FBE66006D39EE /* IDJWallet.m in Sources */,
 				736306471C6142E200619ACF /* AppDelegate.m in Sources */,
 				737FD2691C6A7E310042E6F7 /* IDJMoney.m in Sources */,
 				737FD26D1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m in Sources */,
@@ -263,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A533ED1C6FBE66006D39EE /* IDJWallet.m in Sources */,
+				73A533E91C6FBB90006D39EE /* IDJWalletTests.m in Sources */,
 				737FD2631C6A7BA60042E6F7 /* IDJDollarTests.m in Sources */,
 				736306691C61431100619ACF /* IDJEuroTests.m in Sources */,
 				73A533E31C6FA864006D39EE /* IDJBrokerTests.m in Sources */,

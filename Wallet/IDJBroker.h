@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-@class IDJMoney;
+#import "IDJMoney.h"
 
 @interface IDJBroker : NSObject
--(IDJMoney *)reduce:(IDJMoney *)money toCurrency:(NSString *)currency;
+@property (nonatomic, strong) NSMutableDictionary *rates;
+
+-(IDJMoney *)reduce:(id<IDJMoney>)money toCurrency:(NSString *)currency;
 -(void)addRate:(NSInteger)rate fromCurrency:(NSString *)fromCurrency toCurrency:(NSString *)toCurrency;
+-(NSString *)keyFromCurrency:(NSString *)fromCurency
+                  toCurrency:(NSString *)toCurrency;
 @end

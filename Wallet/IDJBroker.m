@@ -10,7 +10,7 @@
 #import "IDJMoney.h"
 
 @interface IDJBroker ()
-@property (nonatomic, strong) NSMutableDictionary *rates;
+
 @end
 
 @implementation IDJBroker
@@ -23,22 +23,9 @@
     return self;
 }
 
--(IDJMoney *)reduce:(IDJMoney *)money toCurrency:(NSString *)currency{
-    
-    IDJMoney *result;
-    float rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency toCurrency:currency]] floatValue];
-    if ([money.currency isEqual:currency]) {
-        result = money;
-    }else if (rate == 0){
-        [NSException raise:@"NoConversionRateException" format:@"Must have a conversion from %@ to %2",money.currency, currency];
-    }else{
-        NSString *currencyKey = [self keyFromCurrency:money.currency toCurrency:currency];
-        NSInteger newAmount = money.amount.integerValue * rate;
-        
-        result = [[IDJMoney alloc] initWithAmount:newAmount currency:currency];
-    }
-    
-    return result;
+-(IDJMoney *)reduce:(id<IDJMoney>)money toCurrency:(NSString *)currency{
+    // double dispatch
+    return [money reduceToCurrency:currency withBroker:self];
 }
 
 -(void)addRate:(NSInteger)rate fromCurrency:(NSString *)fromCurrency toCurrency:(NSString *)toCurrency{
