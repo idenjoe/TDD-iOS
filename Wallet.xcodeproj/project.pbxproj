@@ -48,7 +48,6 @@
 		737FD26B1C6A814C0042E6F7 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		737FD26E1C6A83D50042E6F7 /* IDJMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJMoneyTests.m; sourceTree = "<group>"; };
-		737FD2701C6A8D470042E6F7 /* IDJMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IDJMoney-Private.h"; sourceTree = "<group>"; };
 		73A533E21C6FA864006D39EE /* IDJBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJBrokerTests.m; sourceTree = "<group>"; };
 		73A533E41C6FA8FD006D39EE /* IDJBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDJBroker.h; sourceTree = "<group>"; };
 		73A533E51C6FA8FD006D39EE /* IDJBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDJBroker.m; sourceTree = "<group>"; };
@@ -138,7 +137,6 @@
 			children = (
 				737FD2671C6A7E310042E6F7 /* IDJMoney.h */,
 				737FD2681C6A7E310042E6F7 /* IDJMoney.m */,
-				737FD2701C6A8D470042E6F7 /* IDJMoney-Private.h */,
 				73A533E41C6FA8FD006D39EE /* IDJBroker.h */,
 				73A533E51C6FA8FD006D39EE /* IDJBroker.m */,
 			);

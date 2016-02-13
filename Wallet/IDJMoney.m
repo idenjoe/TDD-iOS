@@ -8,7 +8,9 @@
 
 #import "IDJMoney.h"
 #import "NSObject+GNUStepAddons.h"
-#import "IDJMoney-Private.h"
+@interface IDJMoney ()
+@property(nonatomic, strong) NSNumber *amount;
+@end
 
 @implementation IDJMoney
 
@@ -53,13 +55,13 @@
 }
 
 -(NSUInteger)hash{
-    return (NSUInteger)self.amount;
+    return [self.amount integerValue];
 }
 
 #pragma mark - Overriden
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"<%@ %ld>",[self class],(long)[self amount]];
+    return [NSString stringWithFormat:@"<%@: %@ %@>",[self class],self.currency,self.amount];
 }
 
 @end

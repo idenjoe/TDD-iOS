@@ -31,4 +31,15 @@
 -(void)testSimpleAddition{
     XCTAssertEqualObjects([[IDJMoney dollarWithAmount:5] plus:[IDJMoney dollarWithAmount:5]],[IDJMoney dollarWithAmount:10],@"$5 + $5 = $10");
 }
+
+-(void)testHashIsAmount{
+    IDJMoney *one = [IDJMoney dollarWithAmount:1];
+    XCTAssertEqual([one hash], 1,@"The hash must be the same as the amount");
+}
+
+-(void)testDescription{
+    IDJMoney *one = [IDJMoney dollarWithAmount:1];
+    NSString *desc = @"<IDJMoney: USD 1>";
+    XCTAssertEqualObjects([one description], desc, @"Description must match template");
+}
 @end
