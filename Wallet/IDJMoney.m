@@ -38,7 +38,18 @@
 
 - (BOOL)isEqual:(id)other
 {
-    return [self amount] == [other amount];
+    if ([self.currency isEqual:[other currency]]) {
+        return [self amount] == [other amount];
+    }else{
+        return NO;
+    }
+}
+
+-(IDJMoney *)plus:(IDJMoney *)other{
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    
+    IDJMoney *total = [[IDJMoney alloc] initWithAmount:totalAmount currency:self.currency];
+    return total;
 }
 
 -(NSUInteger)hash{

@@ -17,5 +17,6 @@
 -(id)initWithAmount:(NSUInteger)amount
            currency:(NSString *)currency;
 -(id)times:(NSUInteger)times;
+-(IDJMoney *)plus:(IDJMoney *)other;
 
 @end
