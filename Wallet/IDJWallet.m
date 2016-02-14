@@ -7,6 +7,7 @@
 //
 
 #import "IDJWallet.h"
+#import "IDJBroker.h"
 
 @interface IDJWallet ()
 @property(nonatomic, strong) NSMutableDictionary *moneys;
@@ -58,20 +59,11 @@
     for (IDJMoney *money in moneyForCurrency) {
         totalMoney = [totalMoney plus:money];
     }
-    return totalMoney;
+    return [totalMoney reduceToCurrency:@"EUR" withBroker:[IDJBroker sharedInstance]];
 }
 
 -(IDJMoney *)totalAmountForAllCurrencies{
-    IDJMoney *totalMoney = [[IDJMoney alloc] initWithAmount:0 currency:@"EUR"];
-    NSArray *currencies = [self.moneys allKeys];
-    for (NSString *currency in currencies) {
-        NSArray *moneys = [self.moneys objectForKey:currency];
-        for (IDJMoney *money in moneys) {
-            totalMoney = [totalMoney plus:money];
-        }
-    }
-    
-    return totalMoney;
+    return [self reduceToCurrency:@"EUR" withBroker:[IDJBroker sharedInstance]];
 }
 
 -(NSString *)currencyAtIndex:(NSInteger)section{

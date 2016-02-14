@@ -76,6 +76,10 @@
     return result;
 }
 
+-(NSString *)prettyDescription{
+    return [NSString stringWithFormat:@"%@ %@",self.amount, self.currency];
+}
+
 -(NSUInteger)hash{
     return [self.amount integerValue];
 }

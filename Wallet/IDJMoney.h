@@ -26,5 +26,6 @@
 
 +(id)euroWithAmount:(NSInteger)amount;
 +(id)dollarWithAmount:(NSInteger)amount;
+-(NSString *)prettyDescription;
 
 @end

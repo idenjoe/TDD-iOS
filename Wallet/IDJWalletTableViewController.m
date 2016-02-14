@@ -23,6 +23,9 @@
     return self;
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
 
 #pragma mark - Table view data source
 
@@ -42,7 +45,16 @@
     }
 
     IDJMoney *money = [self.wallet moneyAtSection:indexPath.section andRow:indexPath.row];
-    cell.textLabel.text = [[money amount] stringValue];
+    if ([self.wallet countMoneyAtIndex:indexPath.section] < indexPath.row+1) {
+        
+        NSString *boldString = [NSString stringWithFormat:@"Total: %@",[money prettyDescription]];
+        NSMutableAttributedString *myBoldString = [[NSMutableAttributedString alloc] initWithString:boldString];
+        [myBoldString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:20.0] range:NSMakeRange(0,6)];
+        cell.textLabel.attributedText = myBoldString;
+    }else{
+        cell.textLabel.text = [money prettyDescription];
+    }
+    
     
     return cell;
 }

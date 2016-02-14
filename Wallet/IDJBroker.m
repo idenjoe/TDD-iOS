@@ -15,6 +15,15 @@
 
 @implementation IDJBroker
 
++(IDJBroker *)sharedInstance{
+    static dispatch_once_t pred;
+    static IDJBroker *shared = nil;
+    dispatch_once(&pred, ^{
+        shared = [[IDJBroker alloc] init];
+    });
+    return shared;
+}
+
 -(instancetype)init{
     if (self = [super init]) {
         _rates = [@{}mutableCopy];

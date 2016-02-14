@@ -12,6 +12,7 @@
 @interface IDJBroker : NSObject
 @property (nonatomic, strong) NSMutableDictionary *rates;
 
++(IDJBroker *)sharedInstance;
 -(IDJMoney *)reduce:(id<IDJMoney>)money toCurrency:(NSString *)currency;
 -(void)addRate:(NSInteger)rate fromCurrency:(NSString *)fromCurrency toCurrency:(NSString *)toCurrency;
 -(NSString *)keyFromCurrency:(NSString *)fromCurency
