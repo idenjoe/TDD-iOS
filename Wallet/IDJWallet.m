@@ -27,10 +27,68 @@
     return [self.moneys count];
 }
 
--(NSUInteger)moneyAtIndex:(NSUInteger)index{
+-(NSUInteger)countMoneyAtIndex:(NSUInteger)index{
     NSArray *currencies = [self.moneys allKeys];
-    return [[self.moneys objectForKey:currencies] count];
+    if (index > [currencies count]-1) {
+        return 0;
+    }
+    
+    NSString *currency = [currencies objectAtIndex:index];
+    return [[self.moneys objectForKey:currency] count];
 }
+
+-(IDJMoney *)moneyAtSection:(NSInteger)section andRow:(NSInteger)row{
+    NSUInteger countMoneys = [self countMoneyAtIndex:section];
+    NSUInteger countCurrencies = [self countCurrencies];
+    if (section > countCurrencies-1) {
+        return [self totalAmountForAllCurrencies];
+    }else{
+        if (row > countMoneys-1) {
+            NSString *currencyAtSection = [[self.moneys allKeys] objectAtIndex:section];
+            return [self totalAmountForCurrency:currencyAtSection];
+        }else{
+            return [self moneyForSection:section andRow:row];
+        }
+    }
+}
+
+-(IDJMoney *)totalAmountForCurrency:(NSString *)currency{
+    NSArray *moneyForCurrency = [self.moneys objectForKey:currency];
+    IDJMoney *totalMoney = [[IDJMoney alloc] initWithAmount:0 currency:currency];
+    for (IDJMoney *money in moneyForCurrency) {
+        totalMoney = [totalMoney plus:money];
+    }
+    return totalMoney;
+}
+
+-(IDJMoney *)totalAmountForAllCurrencies{
+    IDJMoney *totalMoney = [[IDJMoney alloc] initWithAmount:0 currency:@"EUR"];
+    NSArray *currencies = [self.moneys allKeys];
+    for (NSString *currency in currencies) {
+        NSArray *moneys = [self.moneys objectForKey:currency];
+        for (IDJMoney *money in moneys) {
+            totalMoney = [totalMoney plus:money];
+        }
+    }
+    
+    return totalMoney;
+}
+
+-(NSString *)currencyAtIndex:(NSInteger)section{
+    NSArray *currencies = [self.moneys allKeys];
+    if (section > [currencies count]-1) {
+        return @"Total";
+    }else{
+        return [currencies objectAtIndex:section];
+    }
+}
+
+-(IDJMoney *)moneyForSection:(NSInteger)section andRow:(NSInteger)row{
+    NSArray *currencies = [self.moneys allKeys];
+    NSString *desiredCurrency = [currencies objectAtIndex:section];
+    return [[self.moneys objectForKey:desiredCurrency] objectAtIndex:row];
+}
+
 
 -(id<IDJMoney>)plus:(IDJMoney *)other{
     NSMutableArray *money = [self.moneys objectForKey:other.currency];

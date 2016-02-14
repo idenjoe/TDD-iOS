@@ -14,6 +14,8 @@
 
 -(void)addMoney:(IDJMoney *)money;
 -(void)takeMoney:(IDJMoney *)money;
--(NSUInteger)moneyAtIndex:(NSUInteger)index;
+-(NSUInteger)countMoneyAtIndex:(NSUInteger)index;
+-(IDJMoney *)moneyAtSection:(NSInteger)section andRow:(NSInteger)row;
+-(NSString *)currencyAtIndex:(NSInteger)section;
 
 @end

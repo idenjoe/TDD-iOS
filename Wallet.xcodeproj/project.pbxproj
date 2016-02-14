@@ -111,6 +111,7 @@
 		736306411C6142E200619ACF /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				739C8E811C6FEF7600C2651D /* Views */,
 				73A533EE1C6FCBF2006D39EE /* Controllers */,
 				737FD26A1C6A81290042E6F7 /* Categories */,
 				7363066A1C6143DC00619ACF /* Model */,
@@ -174,6 +175,13 @@
 				737FD26C1C6A814C0042E6F7 /* NSObject+GNUStepAddons.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		739C8E811C6FEF7600C2651D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		73A533EE1C6FCBF2006D39EE /* Controllers */ = {

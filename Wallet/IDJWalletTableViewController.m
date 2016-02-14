@@ -16,17 +16,13 @@
 @implementation IDJWalletTableViewController
 
 -(id)initWithModel:(IDJWallet *)wallet{
-    if (self = [super init]) {
+    if (self = [super initWithStyle:UITableViewStyleGrouped]) {
         _wallet = wallet;
     }
     
     return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -35,7 +31,24 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.wallet moneyAtIndex:section] + 1;
+    return [self.wallet countMoneyAtIndex:section] + 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *moneyCellIdentifier = @"moneyCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:moneyCellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:moneyCellIdentifier];
+    }
+
+    IDJMoney *money = [self.wallet moneyAtSection:indexPath.section andRow:indexPath.row];
+    cell.textLabel.text = [[money amount] stringValue];
+    
+    return cell;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [self.wallet currencyAtIndex:section];
 }
 
 @end
