@@ -50,7 +50,8 @@
 }
 
 -(void)testThatNotRateRaisesException{
-    XCTAssertThrows([[IDJBroker sharedInstance] reduce:self.oneDollar toCurrency:@"EUR"],@"No rates should cause exception");
+    IDJBroker *broker = [[IDJBroker alloc] init];
+    XCTAssertThrows([broker reduce:self.oneDollar toCurrency:@"EUR"],@"No rates should cause exception");
 }
 
 -(void)testThatNilCOnversionDoesNotChangedMoney{
