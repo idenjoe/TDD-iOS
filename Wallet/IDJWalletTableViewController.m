@@ -23,6 +23,11 @@
     return self;
 }
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"Wallet";
+}
+
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }

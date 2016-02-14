@@ -31,8 +31,9 @@
     [wallet addMoney:[IDJMoney euroWithAmount:150]];
     [wallet addMoney:[IDJMoney euroWithAmount:3]];
     IDJWalletTableViewController *walletVC = [[IDJWalletTableViewController alloc] initWithModel:wallet];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:walletVC];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = walletVC;
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
 }
