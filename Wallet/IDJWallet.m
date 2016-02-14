@@ -127,6 +127,8 @@
     [self plus:money];
 }
 
+
+//Supposing that you can only takeMoney from the same currency, if not you should reduce every money and check if you can take enoght money from it.
 -(void)takeMoney:(IDJMoney *)money{
     
     NSMutableArray *moneyForCurrency = [self.moneys objectForKey:money.currency];
